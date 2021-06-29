@@ -115,6 +115,7 @@ h5 {
     user-select: none;
     width: 64px;
     overflow: hidden;
+    border-radius: 2px;
 }
 
 .arows span {
