@@ -32,7 +32,6 @@
     }
     borders()
   }
-
   function borders () {
     const bo = document.getElementById('borders')
     const ge = document.getElementsByClassName('arows')
@@ -49,17 +48,5 @@
 
   document.getElementById('borders').addEventListener('click', function (e) {
     document.execCommand('copy')
-  })
-
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const main = document.getElementsByClassName('wrap')[0]
-
-    window.onload = function () {
-      addFadeInClass(main)
-    }
-
-    function addFadeInClass (element) {
-      element.classList.toggle('opac')
-    };
   })
 }())

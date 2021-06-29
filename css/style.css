@@ -8,7 +8,6 @@ body {
     font: 16px/1.5em Arial, Geneva, Tahoma, sans-serif;
     margin: 0;
     position: relative;
-    overflow-y: hidden;
     background: #212425;
 }
 
@@ -58,20 +57,6 @@ h5 {
 .wrap {
     overflow-x: hidden;
     padding: 24px;
-}
-
-.opac {
-    animation: 1s opaci ease;
-}
-
-@keyframes opaci {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 @font-face {
@@ -147,8 +132,8 @@ h5 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 172px;
-    max-height: 172px;
+    max-width: max-content;
+    min-height: 102px;
     display: flex;
     height: 100%;
     width: 100%;
@@ -159,9 +144,8 @@ h5 {
 #bordersRadius {
     margin: 0 auto;
     text-align: center;
-    max-width: 300px;
+    max-width: 480px;
     max-height: 300px;
-    /*! background: cadetblue; */
 }
 
 div {
@@ -181,25 +165,27 @@ div[name="borders"] {
     -ms-user-select: all;
     user-select: all;
 }
+
 footer {
     text-align: center;
 }
+
 .container div {
     margin: auto;
-    /*! flex: 1; */
-    /*! display: flex; */
+}
+
+.container div {
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     grid-auto-rows: 1fr;
-    grid-auto-flow: row;
+    grid-template-columns: 64px 1fr 64px;
+    grid-template-rows: 83px 1fr 83px;
     grid-template-areas:
-        "g1 g2 g3"
-        "g4 g5 g6"
-        "g7 g8 g9";
+    "g1 g2 g3"
+    "g4 g4 g4"
+    "g7 g8 g9";
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -222,17 +208,9 @@ footer {
 
 .g4 {
     grid-area: g4;
-}
-
-.g5 {
-    grid-area: g5;
     display: block;
     height: 100%;
     width: 100%;
-}
-
-.g6 {
-    grid-area: g6;
 }
 
 .g7 {
