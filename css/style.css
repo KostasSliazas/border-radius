@@ -174,9 +174,6 @@ footer {
     margin: auto;
 }
 
-.container div {
-}
-
 .container {
     display: grid;
     grid-auto-rows: 1fr;
