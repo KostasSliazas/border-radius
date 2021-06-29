@@ -20,7 +20,7 @@
   document.addEventListener('change', updateArrows)
 
   function updateArrows (e) {
-    if (e.target.parentElement.className === 'arows' || typeof e.target.parentElement.getElementsByTagName('input') !== 'undefined') {
+    if (e.target.parentElement.className === 'arows' || typeof e.target.parentElement.getElementsByTagName('input')[0] !== 'undefined') {
       const g = Number(e.target.parentElement.getElementsByTagName('input')[0].value)
       if (e.target.className === 'uarrow' && g < 100) {
         e.target.parentElement.getElementsByTagName('input')[0].value = lg.up(g)
